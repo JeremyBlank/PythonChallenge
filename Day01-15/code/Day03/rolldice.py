@@ -1,23 +1,19 @@
 """
-掷骰子决定做什么事情
+Piecewise function evaluation
+        3x - 5  (x > 1)
+f(x) =  x + 2   (-1 <= x <= 1)
+        5x + 3  (x < -1)
 
 Version: 0.1
-Author: 骆昊
+Author: Luo Hao
 Date: 2018-02-28
 """
-from random import randint
 
-face = randint(1, 6)
-if face == 1:
-    result = '唱首歌'
-elif face == 2:
-    result = '跳个舞'
-elif face == 3:
-    result = '学狗叫'
-elif face == 4:
-    result = '做俯卧撑'
-elif face == 5:
-    result = '念绕口令'
+x = float(input('x = '))
+if x > 1:
+    y = 3 * x - 5
+elif x >= -1:
+    y = x + 2
 else:
-    result = '讲冷笑话'
-print(result)
+    y = 5 * x + 3
+print('f(%.2f) = %.2f' % (x, y))

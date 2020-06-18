@@ -1,14 +1,14 @@
 """
-输入月收入和五险一金计算个人所得税
-说明：写这段代码时新的个人所得税计算方式还没有颁布
+Enter monthly income and five insurances and one payment to calculate personal income tax
+Note: The new personal income tax calculation method has not been promulgated when writing this code
 
 Version: 0.1
-Author: 骆昊
+Author: Luo Hao
 Date: 2018-02-28
 """
 
-salary = float(input('本月收入: '))
-insurance = float(input('五险一金: '))
+salary = float(input("this month's income: "))
+insurance = float(input('Five insurances and one gold:'))
 diff = salary - insurance - 3500
 if diff <= 0:
     rate = 0
@@ -35,5 +35,5 @@ else:
     rate = 0.45
     deduction = 13505
 tax = abs(diff * rate - deduction)
-print('个人所得税: ￥%.2f元' % tax)
-print('实际到手收入: ￥%.2f元' % (diff + 3500 - tax))
+print('Individual income tax: $%.2f yuan'% tax)
+print('Actual income: $%.2f yuan'% (diff + 3500-tax))

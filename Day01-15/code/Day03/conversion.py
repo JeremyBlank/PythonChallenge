@@ -1,16 +1,16 @@
 """
-英制单位英寸和公制单位厘米互换
+Inch units and inch units are interchanged
 
 Version: 0.1
-Author: 骆昊
+Author: Luo Hao
 Date: 2018-02-28
 """
 
-value = float(input('请输入长度: '))
-unit = input('请输入单位: ')
+value = float(input('Please enter length:'))
+unit = input('Please enter unit:')
 if unit == 'in' or unit == '英寸':
-    print('%f英寸 = %f厘米' % (value, value * 2.54))
-elif unit == 'cm' or unit == '厘米':
-    print('%f厘米 = %f英寸' % (value, value / 2.54))
+    print('%f inches = %f centimeters'% (value, value * 2.54))
+elif unit =='cm' or unit =='cm':
+    print('%fcm = %finch'% (value, value / 2.54))
 else:
-    print('请输入有效的单位')
+    print('Please enter a valid unit')
